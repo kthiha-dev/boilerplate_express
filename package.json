@@ -1,11 +1,11 @@
 {
-  "name": "create-nodejs-express-app",
+  "name": "create-mlion-node-boilerplate",
   "version": "1.7.0",
   "description": "Create a Node.js app for building production-ready RESTful APIs using Express, by running one command",
   "bin": "bin/createNodejsApp.js",
   "main": "src/index.js",
   "repository": "https://github.com/hagopj13/node-express-boilerplate.git",
-  "author": "Hagop Jamkojian <hagopj13@gmail.com>",
+  "author": "Kyaw Thiha <kthiha3@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": ">=12.0.0"
@@ -21,9 +21,6 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check **/*.js",
     "prettier:fix": "prettier --write **/*.js",
-    "docker:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up",
-    "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
-    "docker:test": "docker-compose -f docker-compose.yml -f docker-compose.test.yml up",
     "prepare": "husky install"
   },
   "keywords": [
@@ -34,8 +31,7 @@
     "express",
     "rest",
     "api",
-    "mongodb",
-    "mongoose",
+    "mysql",
     "es6",
     "es7",
     "es8",
@@ -49,6 +45,8 @@
     "prettier"
   ],
   "dependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@jest/globals": "^29.5.0",
     "@prisma/client": "^4.15.0",
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
@@ -73,8 +71,7 @@
     "swagger-jsdoc": "^6.0.8",
     "swagger-ui-express": "^4.1.6",
     "validator": "^13.0.0",
-    "winston": "^3.2.1",
-    "xss-clean": "^0.1.1"
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "coveralls": "^3.0.7",

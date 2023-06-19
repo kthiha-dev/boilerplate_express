@@ -1,41 +1,39 @@
-const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-const faker = require('faker');
-const User = require('../../src/models/user.model');
+const { faker } = require('@faker-js/faker');
+const { Role } = require('@prisma/client');
+const prisma = require('../../src/client');
 
 const password = 'password1';
 const salt = bcrypt.genSaltSync(8);
-const hashedPassword = bcrypt.hashSync(password, salt);
 
 const userOne = {
-  _id: mongoose.Types.ObjectId(),
-  name: faker.name.findName(),
+  name: `${faker.person.firstName()} ${faker.person.lastName()}`,
   email: faker.internet.email().toLowerCase(),
   password,
-  role: 'user',
+  role: Role.USER,
   isEmailVerified: false,
 };
 
 const userTwo = {
-  _id: mongoose.Types.ObjectId(),
-  name: faker.name.findName(),
+  name: `${faker.person.firstName()} ${faker.person.lastName()}`,
   email: faker.internet.email().toLowerCase(),
   password,
-  role: 'user',
+  role: Role.USER,
   isEmailVerified: false,
 };
 
 const admin = {
-  _id: mongoose.Types.ObjectId(),
-  name: faker.name.findName(),
+  name: `${faker.person.firstName()} ${faker.person.lastName()}`,
   email: faker.internet.email().toLowerCase(),
   password,
-  role: 'admin',
+  role: Role.ADMIN,
   isEmailVerified: false,
 };
 
 const insertUsers = async (users) => {
-  await User.insertMany(users.map((user) => ({ ...user, password: hashedPassword })));
+  await prisma.user.createMany({
+    data: users.map((user) => ({ ...user, password: bcrypt.hashSync(user.password, salt) })),
+  });
 };
 
 module.exports = {
