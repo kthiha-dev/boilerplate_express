@@ -1,10 +1,10 @@
 {
   "name": "create-mlion-node-boilerplate",
   "version": "1.0.0",
-  "description": "Create a Node.js app for building production-ready RESTful APIs using Express, by running one command",
+  "description": "Create a Node.js app for building production-ready RESTful APIs using Express",
   "bin": "bin/createNodejsApp.js",
   "main": "src/index.js",
-  "repository": "https://github.com/hagopj13/node-express-boilerplate.git",
+  "repository": "https://github.com/mlioncorp/boilerplate_express.git",
   "author": "Kyaw Thiha <kthiha3@gmail.com>",
   "license": "MIT",
   "engines": {
