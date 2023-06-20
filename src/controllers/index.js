@@ -1,2 +1,1 @@
-module.exports.authController = require('./auth.controller');
-module.exports.healthcheckController = require('./healthcheck.controller');
+module.exports.healthCheckController = require('./healthcheck.controller');

@@ -1,1 +1,1 @@
-module.exports.authValidation = require('./auth.validation');
+module.exports.exampleValidation = require('./example.validation');

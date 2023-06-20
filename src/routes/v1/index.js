@@ -1,5 +1,5 @@
 const express = require('express');
-const authRoute = require('./auth.route');
+const healthCheck = require('./healthcheck.route');
 const docsRoute = require('./docs.route');
 const config = require('../../config/config');
 
@@ -7,8 +7,8 @@ const router = express.Router();
 
 const defaultRoutes = [
   {
-    path: '/auth',
-    route: authRoute,
+    path: '/',
+    route: healthCheck,
   },
 ];
 

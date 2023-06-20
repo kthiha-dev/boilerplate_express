@@ -1,6 +1,6 @@
 {
   "name": "create-mlion-node-boilerplate",
-  "version": "1.7.0",
+  "version": "1.0.0",
   "description": "Create a Node.js app for building production-ready RESTful APIs using Express, by running one command",
   "bin": "bin/createNodejsApp.js",
   "main": "src/index.js",
@@ -38,8 +38,6 @@
     "es9",
     "jest",
     "travis",
-    "docker",
-    "passport",
     "joi",
     "eslint",
     "prettier"
@@ -61,11 +59,8 @@
     "joi": "^17.3.0",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
-    "mongoose": "^5.7.7",
     "morgan": "^1.9.1",
     "nodemailer": "^6.3.1",
-    "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0",
     "pm2": "^5.1.0",
     "prisma": "^4.15.0",
     "swagger-jsdoc": "^6.0.8",
