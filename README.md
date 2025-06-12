@@ -9,7 +9,7 @@ If you would still prefer to do the installation manually, follow these steps:
 Clone the repo:
 
 ```bash
-git clone --depth 1 https://github.com/mlioncorp/boilerplate_express.git
+git clone --depth 1 https://github.com/kthiha-dev/boilerplate_express.git
 cd boilerplate_express
 ```
 
